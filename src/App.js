@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import firebase from './firebaseConfig';
+import FireBase from './FireBase';
 import './App.css';
 
 function App() {
