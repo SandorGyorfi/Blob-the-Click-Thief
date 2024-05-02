@@ -1,0 +1,25 @@
+[debug] [2024-05-02T19:57:47.364Z] ----------------------------------------------------------------------
+[debug] [2024-05-02T19:57:47.368Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mrsan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-05-02T19:57:47.369Z] CLI Version:   13.8.0
+[debug] [2024-05-02T19:57:47.369Z] Platform:      win32
+[debug] [2024-05-02T19:57:47.370Z] Node Version:  v20.9.0
+[debug] [2024-05-02T19:57:47.370Z] Time:          Thu May 02 2024 20:57:47 GMT+0100 (British Summer Time)
+[debug] [2024-05-02T19:57:47.370Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-02T19:57:47.379Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-02T19:57:47.379Z] > authorizing via signed-in user (mr.sandorgyorfi@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\ServerMini\Blob-the-Click-Thief\blob-the-click-thief
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
