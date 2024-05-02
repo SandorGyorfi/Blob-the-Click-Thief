@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";       
+import React, { useState, useEffect, useRef } from "react";
 import { ref, set, onValue } from "firebase/database";
-import { database } from "./components/Firebase/FireBase";        
+import { database } from './components/firebase/FireBase';
 import Blob from "./components/Blob/Blob";
-import ClickPanel from "./components/ClickPanel/ClickPanel";      
+import ClickPanel from "./components/ClickPanel/ClickPanel";
+import GitHubIcon from "./GitHubIcon.svg";  
 import "./App.css";
+
 
 function App() {
   const [count, setCount] = useState(null);
