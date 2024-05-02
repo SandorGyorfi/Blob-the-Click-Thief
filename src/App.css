@@ -1,6 +1,127 @@
+:root {
+  --color-accent-1: #ff007b;
+  --color-accent-2: #7bff00;
+  --color-accent-3: #00ff7b;
+  --color-background: #000;
+  --color-hover: #0056b3;
+  --color-primary: #007bff;
+  --color-text: #fff;
+  --font-family-base: "Arial", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
+  background: radial-gradient(circle at center, #345477, var(--color-background));
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.Container {
+  height: 90vh;
+  width: 90vw;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
 .App {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 90vh;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.GitHubButton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--click-panel-border-radius);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  padding: 10px 15px; 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.GitHubButton:hover {
+  background-color: var(--color-accent-2);
+  color: var(--color-hover);
+}
+
+.GitHubIcon {
+  fill: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .Container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .App {
+    flex-direction: column;
+    padding: 10px;
+    min-height: 100vh;
+  }
+}
+
+
+.Info-Panel {position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 8px 16px;
+  font-size: var(--click-panel-font-size);
+  font-weight: 550;
+  color: var(--color-text);
+  cursor: default;
+  text-align: center;
+  height: var(--click-panel-height);
+  align-items: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .Info-Panel {
+      width: 70%;
+      max-width: 100%;
+      font-size: 1rem;
+      padding: 10px 20px;
+      bottom: 80px;
+      transform: translateX(-50%);
+  }
 }
