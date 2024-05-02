@@ -1,17 +1,126 @@
-.Blob {
-    width: 100px;
-    height: 100px;
-    background-color: #007bff;
+:root {
+    --blob-size-large: 400px;
+    --blob-size-small: 200px;
+    --blob-background-gradient-start: rgba(255, 255, 255, 0.2);     
+    --blob-shadow-color: rgba(255, 255, 255, 0.8);
+    --blob-background-gradient-end: transparent 30%;
+    --blob-background-color-1: rgba(0, 123, 255, 0.4);
+    --blob-background-color-2: rgba(255, 20, 147, 0.4);
+    --blob-background-color-3: rgba(0, 255, 0, 0.4);
+    --blob-background-color-4: rgba(0, 255, 255, 0.4);
+  }
+  
+  .Blob {
+    width: var(--blob-size-large);
+    height: var(--blob-size-large);
     border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    user-select: none;
-    transition: background 0.3s;
+    box-shadow: 0 0 30px var(--blob-shadow-color), inset 0 0 30px var(--blob-shadow-color);
+    background: radial-gradient(circle at center, var(--blob-background-gradient-start), var(--blob-background-gradient-end));        
+    animation: blob-move 20s ease-in-out infinite alternate, color-shift 30s ease-in-out infinite alternate, wave 20s ease-in-out infinite;
   }
   
-  .Blob:hover {
-    background-color: #0056b3;
+  @keyframes wave {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      border-radius: 50%;
+    }
+    10% {
+      transform: translate(-50.5%, -49.5%) scale(1.01) rotate(-1deg);
+      border-radius: 60% 40% 60% 40%;
+    }
+    20% {
+      transform: translate(-49.5%, -50.5%) scale(1.02) rotate(1deg);
+      border-radius: 40% 60% 40% 60%;
+    }
+    30% {
+      transform: translate(-50%, -50%) scale(0.99);
+      border-radius: 50% 50% 50% 50%;
+    }
+    40% {
+      transform: translate(-50.5%, -49.5%) scale(1.03) rotate(-2deg);
+      border-radius: 60% 40% 60% 40%;
+    }
+    50% {
+      transform: translate(-49.5%, -50.5%) scale(1.01) rotate(2deg);
+      border-radius: 40% 60% 40% 60%;
+    }
+    60% {
+      transform: translate(-50%, -50%) scale(1.02);
+      border-radius: 50% 50% 50% 50%;
+    }
+    70% {
+      transform: translate(-50.5%, -49.5%) scale(0.98) rotate(-1deg);
+      border-radius: 60% 40% 60% 40%;
+    }
+    80% {
+      transform: translate(-49.5%, -50.5%) scale(1.04) rotate(1deg);
+      border-radius: 40% 60% 40% 60%;
+    }
+    90% {
+      transform: translate(-50%, -50%) scale(1.01) rotate(-2deg);   
+      border-radius: 50% 50% 50% 50%;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      border-radius: 50%;
+    }
+  }
+  
+  @keyframes blob-move {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    15% {
+      transform: translate(-48%, -52%) scale(1.01) rotate(-3deg);   
+    }
+    30% {
+      transform: translate(-52%, -48%) scale(1.02) rotate(3deg);    
+    }
+    45% {
+      transform: translate(-50%, -50%) scale(0.98);
+    }
+    60% {
+      transform: translate(-51%, -49%) scale(1.03) rotate(-2deg);   
+    }
+    75% {
+      transform: translate(-49%, -51%) scale(1.01) rotate(2deg);    
+    }
+    90% {
+      transform: translate(-50%, -50%) scale(1.02);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  @keyframes color-shift {
+    0%, 100% {
+      background: radial-gradient(circle at center, var(--blob-background-gradient-start), var(--blob-background-color-1));
+    }
+    25% {
+      background: radial-gradient(circle at center, var(--blob-background-gradient-start), var(--blob-background-color-2));
+    }
+    50% {
+      background: radial-gradient(circle at center, var(--blob-background-gradient-start), var(--blob-background-color-3));
+    }
+    75% {
+      background: radial-gradient(circle at center, var(--blob-background-gradient-start), var(--blob-background-color-4));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Blob {
+      width: var(--blob-size-small);
+      height: var(--blob-size-small);
+      box-shadow: 0 0 15px var(--blob-shadow-color), inset 0 0 15px var(--blob-shadow-color);
+    }
   }
   
