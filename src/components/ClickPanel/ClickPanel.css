@@ -1,8 +1,51 @@
-.ClickPanel {
-    padding: 10px;
-    background-color: #ff007b;
-    color: white;
-    border-radius: 10px;
+:root {
+    --click-panel-padding: 16px;
+    --click-panel-font-size: 1.2rem;
+    --click-panel-width: auto;
+    --click-panel-height: 50px;
+    --click-panel-background-color: var(--color-accent-1);        
+    --click-panel-hover-color: var(--color-accent-2);
+    --click-panel-text-color: var(--color-text);
+    --click-panel-border-radius: 20px;
+    --click-panel-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);      
+    --click-panel-margin-top: 10px;
+}
+
+.Click-Panel {
+    position: fixed;
+    top: var(--click-panel-margin-top);
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 8px 16px;
+    font-size: var(--click-panel-font-size);
+    font-weight: 600;
+    background-color: var(--color-accent-2);
+    color: var(--color-hover);
+    border-radius: var(--click-panel-border-radius);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    cursor: default;
     text-align: center;
-  }
-  
+    min-width: 50%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: var(--click-panel-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    transition: background-color 0.5s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    .Click-Panel {
+        width: 70%;
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 10px 20px;
+        top: 20px;
+        transform: translateX(-50%);
+    }
+}
