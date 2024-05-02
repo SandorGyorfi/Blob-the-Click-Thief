@@ -1,27 +1,12 @@
 import React from 'react';
 import './Blob.css';
-import { ref, set, onValue } from "firebase/database";
-import { database } from '../Firebase/FireBase';
+import Counter from '../Counter/Counter';
 
-function Blob() {
-  const [count, setCount] = React.useState(0);
-
-  React.useEffect(() => {
-    const countRef = ref(database, 'clicks/count');
-    onValue(countRef, (snapshot) => {
-      const data = snapshot.val();
-      setCount(data || 0);
-    });
-  }, []);
-
-  const handleClick = () => {
-    const newCount = count + 1;
-    set(ref(database, 'clicks/count'), newCount);
-  };
-
+function Blob({ onClick, count }) {
+  console.log("Rendering Blob component");
   return (
-    <div className="Blob" onClick={handleClick}>
-      <p>Click count: {count}</p>
+    <div className="Blob" onClick={onClick} data-testid="blob">   
+      <Counter count={count} />
     </div>
   );
 }

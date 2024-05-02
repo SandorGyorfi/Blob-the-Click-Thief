@@ -1,11 +1,15 @@
-import React from 'react';
-import './ClickPanel.css';
+import React from "react";
+import "./ClickPanel.css";
 
-function ClickPanel() {
+function ClickPanel({ message, bgColor, textColor }) {
+  console.log("message:", message);
+  console.log("bgColor:", bgColor);
+  console.log("textColor:", textColor);
+
   return (
-    <div className="ClickPanel">
-      <p>Panel for click messages will appear here.</p>
-    </div>
+    <>
+      <div className="Click-Panel">{message}</div>
+    </>
   );
 }
 
