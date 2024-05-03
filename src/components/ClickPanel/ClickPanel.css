@@ -9,6 +9,8 @@
     --click-panel-border-radius: 20px;
     --click-panel-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);      
     --click-panel-margin-top: 40px;
+    --font-family-base: "Arial", sans-serif;
+
 }
 
 .Click-Panel {
@@ -34,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: var(--font-family-base);
     transition: background-color 0.5s ease-in-out;
 }
 

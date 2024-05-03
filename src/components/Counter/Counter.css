@@ -6,6 +6,8 @@
     --counter-font-size-large: 2.1rem;
     --counter-font-size-small: 1.5rem;
     --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-family-base: "Arial", sans-serif;
+
   }
 
   .Counter {
@@ -24,6 +26,7 @@
     box-shadow: 0 0 4px var(--shadow-color);
     background-color: var(--color-text);
     color: var(--color-hover);
+    font-family: var(--font-family-base);
     font-size: var(--counter-font-size-large);
     font-weight: 650;
     display: flex;
