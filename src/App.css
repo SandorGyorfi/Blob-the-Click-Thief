@@ -104,7 +104,7 @@ html, body {
   text-align: center;
   height: var(--click-panel-height);
   align-items: center;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: var(--font-family-base);
   white-space: nowrap;
   animation: marquee 40s linear infinite;
 }
