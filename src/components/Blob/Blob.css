@@ -1,6 +1,6 @@
 :root {
     --blob-size-large: 400px;
-    --blob-size-small: 200px;
+    --blob-size-small: 350px;
     --blob-background-gradient-start: rgba(255, 255, 255, 0.2);     
     --blob-shadow-color: rgba(255, 255, 255, 0.8);
     --blob-background-gradient-end: transparent 30%;

@@ -8,7 +8,7 @@
     --click-panel-text-color: var(--color-text);
     --click-panel-border-radius: 20px;
     --click-panel-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);      
-    --click-panel-margin-top: 10px;
+    --click-panel-margin-top: 40px;
 }
 
 .Click-Panel {
@@ -41,7 +41,7 @@
 
 @media (max-width: 768px) {
     .Click-Panel {
-        width: 70%;
+        width: 90%;
         max-width: 100%;
         font-size: 1rem;
         padding: 10px 20px;
