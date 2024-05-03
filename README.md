@@ -39,4 +39,4 @@ You can access the live application here: [Blob the Click Thief Live App](https:
 - **GitHub:** Version control and source code management.
 - **Netlify:** Deployment with automatic updates upon new commits.
 
-Project management and issue tracking were handled using **Jira**, facilitating organized development and collaboration throughout the project lifecycle.
+Project management and issue tracking were handled using **Jira**, facilitating organized development throughout by C the project lifecycle.
