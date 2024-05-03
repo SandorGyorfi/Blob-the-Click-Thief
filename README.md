@@ -7,6 +7,10 @@
 
 </div>
 
+# Live Application
+
+You can access the live application here: [Blob the Click Thief Live App](https://66354867c262825199e888a2--magenta-liger-6ddc3d.netlify.app/)
+
 # Features
 
 <div align="justify">
