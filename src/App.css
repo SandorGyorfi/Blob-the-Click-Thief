@@ -106,7 +106,7 @@ html, body {
   align-items: center;
   font-family: var(--font-family-base);
   white-space: nowrap;
-  animation: marquee 40s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
 @keyframes marquee {
