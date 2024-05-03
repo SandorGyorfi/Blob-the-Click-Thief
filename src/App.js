@@ -30,9 +30,7 @@ function App() {
     "A fine click indeed! Swiped right under your nose!",
     "Clicks away! Thanks for contributing to the cause!",
     "Your generosity is unmatched, click captain!",
-    "Thanks for the click! I'll make sure it's put to good use!", 
     "Ah, another click for the chest! You're too kind!",
-    "Your clicks are like gold dust, and I'm panning for more!",  
     "Click-heist successful! You're the best accomplice!",        
   ];
 
@@ -99,10 +97,8 @@ function App() {
         }}
       >
         <div className="marquee-container">
-          <p>
-            Click Blob, the sneaky friend, Each click it keeps until the end! In
-            its clicky home they hide, No restart, those clicks can't ride!
-          </p>
+          <p>Click Blob, the sneaky friend, Each click it keeps until the end!
+         Inits clicky home they hide, No restart, those clicks can't ride!</p>
         </div>
       </div>
     </div>
