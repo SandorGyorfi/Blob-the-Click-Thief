@@ -27,15 +27,12 @@ html, body {
 }
 
 .Container {
-  height: auto;  
-  max-height: 100vh;  
+  height: 90vh;
   width: 90vw;
   margin: auto;
   position: relative;
-  overflow: auto;  
-  padding-bottom: 50px;  
+  overflow: hidden;
 }
-
 
 .App {
   display: flex;
@@ -53,21 +50,19 @@ html, body {
 }
 
 .GitHubButton {
-  position: absolute;  
-  bottom: 20px;       
+  position: fixed;
+  bottom: 60px;
   right: 10px;
   background-color: var(--color-background);
   color: var(--color-text);
   border: none;
   border-radius: var(--click-panel-border-radius);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  padding: 10px 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  padding: 10px 15px; 
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 
 .GitHubButton:hover {
   background-color: var(--color-accent-2);
@@ -81,8 +76,8 @@ html, body {
 
 @media (max-width: 768px) {
   .Container {
-      width: 100vw;
-      padding-bottom: 60px; 
+    width: 100vw;
+    height: 100vh;
   }
 
   .App {
@@ -126,7 +121,7 @@ html, body {
       max-width: 100%;
       font-size: 1rem;
       padding: 10px 20px;
-      bottom: 80px;
+      bottom: 130px;
       transform: translateX(-50%);
   }
 }
