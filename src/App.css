@@ -91,7 +91,6 @@ html, body {
 }
 }
 
-
 .Info-Panel {
   position: fixed;
   bottom: 90px;
@@ -122,9 +121,7 @@ html, body {
 
 @media (max-width: 768px) {
   .Info-Panel {
-    max-width: 100%;
     font-size: 1rem;
-    padding: 10px 20px;
     bottom: 180px;
   }
 }
